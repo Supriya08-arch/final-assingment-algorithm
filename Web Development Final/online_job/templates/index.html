@@ -1,0 +1,112 @@
+{% load static %}
+{% block body %}
+
+
+{% include 'navigation.html' %}
+<style>
+    .container{
+    max-width:90%
+    }
+
+    .content{
+    text-align:center;
+    position:absolute;
+    bottom:0;
+    background:black;
+    color:white;
+    height:20px;
+    width:300px;
+    }
+
+    .container-fluid{
+
+    }
+    .carousel-caption,h5{
+    font-size: 60px;
+ }
+
+</style>
+
+<form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" style="width:200px" type="submit">Search</button>
+      </form>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'images/jobportal.jfif'%}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>WELCOME TO ONLINE JOB PORTAL </h5>
+        <p>GET YOUR JOB HERE</p>
+      </div>
+    </div>
+      </div>
+</div>
+
+<div class="container-fluid" style="background-color:purple; height:570px; margin-top:2%">
+<h1 class="text-center text-white">| OUR PLACED INTERNS COMPANY |</h1>
+    <div class="row mt-4">
+        <div class="col-md-3">
+            <img src="{% static 'images/company.jfif'%}" style="width:85% ; margin-top:5%; height: 180px; border-radius:50%">
+            <div class="content" >
+            <p>COMPANY</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <img src="{% static 'images/foodstyle.png'%}" style="width:85% ; margin-top:5%; height: 180px; border-radius:50%">
+            <div class="content" >
+            <p>FOODSTYLE</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <img src="{% static 'images/autobot.jpg'%}" style="width:85% ; margin-top:5%; height: 180px; border-radius:50%">
+            <div class="content" >
+            <p>AUTOBOT</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <img src="{% static 'images/callcenter.jfif'%}" style="width:85% ; margin-top:5%; height: 180px; border-radius:50%">
+            <div class="content" >
+            <p>CALL CENTER</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row mt-5">
+        <div class="col-md-3">
+            <img src="{% static 'images/pathao.png'%}" style="width:100% ; margin-top:5%; height: 180px; border-radius:50%">
+            <div class="content" >
+            <p>PATHAO</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <img src="{% static 'images/delivery.png'%}" style="width:85% ; margin-top:5%; height: 180px; border-radius:50%">
+            <div class="content" >
+            <p>DELIVERY</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <img src="{% static 'images/kfc.png'%}" style="width:85% ; margin-top:5%; height: 180px; border-radius:50%">
+            <div class="content" >
+            <p>KFC</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <img src="{% static 'images/md.jfif'%}" style="width:85% ; margin-top:5%; height: 180px; border-radius:50%">
+            <div class="content" >
+            <p>MCDONALD'S</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% include 'footer.html'%}
+
+{% endblock%}

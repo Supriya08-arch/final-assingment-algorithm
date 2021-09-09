@@ -1,0 +1,35 @@
+{% load static %}
+
+<div class="mt-5" style="background-color:black ; width:100% ; height:350px">
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 mt-3">
+            <h3 class="text-white">Contact Information</h3>
+            <p style="color:white ; font-size:20px"><i class="fa fa-map-marker text-danger"></i> Kathmandu, Nepal</p>
+            <p style="color:white ; font-size:20px"><i class="fa fa-envelope text-danger"></i> supukarki5@gmail.com</p>
+            <p style="color:white ; font-size:20px"><i class="fa fa-mobile text-danger"></i> +977 9840714362/ +977 9803710800</p>
+            <p style="color:white ; font-size:20px"><i class="fa fa-globe text-danger"></i> www.onlinejobportal.com</p>
+
+        </div>
+
+        <div class="col-md-4 mt-3">
+            <h3 class="text-white ">Online Placement</h3>
+            <p style="color:white ; font-size:20px"> We are glad to announce that we are even providing online job placement for the eligible clients. All the online jobs have its own criteria and policy. Some can even be based on stay home and work.</p>
+
+        </div>
+
+        <div class="col-md-4 mt-3">
+            <h3 class="text-white">News/Letter</h3>
+            <p style="color:white ; font-size:20px">If you need any addition features of any other family then you can mail me or send us your mail.</p>
+            <form method="post"class="form-inline">
+                {% csrf_token %}
+                <input type="email" name="emaild id" placehoder="Email ID" required class="form-control mr-2">
+                <input type="submit" value="Send"class="btn btn-primary">
+
+            </form>
+
+        </div>
+    </div>
+
+</div>
+</div>
