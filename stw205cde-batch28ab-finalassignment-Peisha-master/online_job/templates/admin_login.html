@@ -17,6 +17,7 @@
     <input type="password" class="form-control" name="pwd" placeholder="Enter Password">
 
     <input type="submit" class="btn btn-primary" style="margin-top:2% ; color:white; background-color:black; ">
+    <a href="{% url 'forgetpassword' %}" class="btn btn-primary" style="margin-top:2% ; color:white; background-color:black;"> Forget Password </a>
 </form>
 
 {% ifequal error "no" %}

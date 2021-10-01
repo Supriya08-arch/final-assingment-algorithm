@@ -37,6 +37,8 @@ urlpatterns = [
     path('job_detail/<int:pid>', job_detail, name="job_detail"),
     path('applyforjob/<int:pid>', applyforjob, name="applyforjob"),
     path('applied_candidatelist', applied_candidatelist, name="applied_candidatelist"),
-    path('contact>', contact, name="contact")
+    path('contact>', contact, name="contact"),
+    path('forgetpassword', forgetpassword, name="forgetpassword"),
+    path('changepassword/<token>/', changepassword, name="changepassword"),
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 

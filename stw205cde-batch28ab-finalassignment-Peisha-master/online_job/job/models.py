@@ -46,3 +46,10 @@ class Apply(models.Model):
     applydate = models.DateField()
     def _str_(self):
         return self.id
+
+class Profile(models.Model):
+    user=models.OneToOneField(User,on_delete=models.CASCADE)
+    forget_password_token = models.CharField(max_length=100)
+    created_at=models.DateField(auto_now_add=True)
+    def __str__(self):
+        return self.user.uname

@@ -1,8 +1,11 @@
+from django.contrib import messages
 from django.shortcuts import render,redirect
 from .models import *
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
 from datetime import date
+from .helpers import send_forget_password_mail
+import uuid
 # Create your views here.
 
 def index(request):
@@ -461,3 +464,31 @@ def applied_candidatelist(request):
 
 def contact(request):
     return render(request, 'contact.html')
+
+
+def changepassword(request, token):
+    context = {}
+    try:
+        profile_obj = Profile.objects.get(forget_password_token=token)
+        print(profile_obj)
+    except Exception as e:
+        print(e)
+        return render(request, 'changepassword.html')
+
+def forgetpassword(request):
+    try:
+        if request.method == 'POST':
+            a = request.POST['email'];
+            user = authenticate(email=a)
+
+            if not StudentUser.objects.filter(user=a):
+                messages.success(request,'User not found!')
+                return redirect(request,'forgetpassword.html')
+
+            user_obj=StudentUser.objects.get(user=a)
+            token = str(uuid.uuid4())
+            send_forget_password_mail(user_obj,token)
+            messages.success(request,'An email is sent')
+    except Exception as e:
+        print (e)
+    return render(request,'forgetpassword.html')
